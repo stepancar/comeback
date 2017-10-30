@@ -1,0 +1,1 @@
+ts-node src/bst/index.spec.ts
