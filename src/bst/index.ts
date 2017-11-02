@@ -34,6 +34,14 @@ export class BST {
 
         return this;
     }
+
+    walk(callback: (node: Node) => any, node = this.root) {
+        if (node) {
+            callback(node);
+            this.walk(callback, node.left);
+            this.walk(callback, node.right)
+        }
+    }
 }
 
 class Node {
